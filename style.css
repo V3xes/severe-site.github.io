@@ -2,20 +2,19 @@
 
 :root {
   --bg1: #232526;
-  --bg2: #ffb347;
-  --bg3: #ff5e62;
-  --bg4: #7b4397;
+  --bg2: #a259ff;
+  --bg3: #232526;
   --fg: #fff;
-  --accent: #ffb347;
-  --accent2: #ff5e62;
-  --accent3: #7b4397;
-  --code-bg: #2d2d3a;
-  --code-bar: #232526;
+  --accent: #a259ff;
+  --accent2: #232526;
+  --accent3: #4fc3f7;
+  --code-bg: #181828;
+  --code-bar: #23233a;
   --transition: 0.4s cubic-bezier(.77,0,.18,1);
 }
 
 body {
-  background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 40%, var(--bg3) 80%, var(--bg4) 100%);
+  background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 60%, var(--bg3) 100%);
   background-size: 200% 200%;
   animation: gradientMove 8s ease-in-out infinite alternate;
   color: var(--fg);
@@ -96,7 +95,7 @@ nav {
 }
 .nav-link.active, .nav-link:hover {
   background: var(--accent2);
-  color: #fff;
+  color: var(--accent);
 }
 
 .color-btn {
@@ -104,15 +103,15 @@ nav {
   height: 32px;
   border-radius: 50%;
   border: none;
-  background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
   cursor: pointer;
   margin-right: 16px;
-  box-shadow: 0 0 12px var(--accent2);
+  box-shadow: 0 0 12px var(--accent);
   transition: box-shadow var(--transition);
 }
 
 .download-btn {
-  background: var(--accent3);
+  background: var(--accent);
   color: #fff;
   padding: 12px 32px;
   border-radius: 12px;
@@ -124,8 +123,8 @@ nav {
 }
 .download-btn:hover {
   background: #fff;
-  color: var(--accent3);
-  box-shadow: 0 4px 32px 0 var(--accent3);
+  color: var(--accent);
+  box-shadow: 0 4px 32px 0 var(--accent);
 }
 
 main {
@@ -194,9 +193,9 @@ main {
   font-family: 'Fira Mono', 'Consolas', monospace;
   line-height: 1.6;
 }
-.purple { color: var(--accent3); }
-.blue { color: var(--accent2); }
-.green { color: var(--accent); }
+.purple { color: var(--accent); }
+.blue { color: var(--accent3); }
+.green { color: var(--accent2); }
 
 .faq-section {
   background: transparent;
@@ -265,7 +264,7 @@ main {
 .buy-section h2 {
   font-size: 2rem;
   margin-bottom: 18px;
-  color: var(--accent2);
+  color: var(--accent);
 }
 .buy-steps {
   text-align: left;
@@ -274,51 +273,31 @@ main {
   line-height: 1.7;
 }
 .buy-steps a {
-  color: var(--accent2);
+  color: var(--accent);
   text-decoration: underline;
   word-break: break-all;
 }
-.buy-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 18px;
-}
-.buy-form input, .buy-form textarea {
-  background: var(--accent3);
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  color: var(--fg);
-  font-size: 1rem;
-  outline: none;
-  transition: background var(--transition);
-}
-.buy-form input:focus, .buy-form textarea:focus {
-  background: var(--accent2);
+.discord-ticket-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #5865F2;
   color: #fff;
-}
-.buy-form button {
-  background: var(--accent2);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 0;
-  font-size: 1.1rem;
   font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  padding: 14px 32px;
+  margin-top: 18px;
+  text-decoration: none;
+  box-shadow: 0 2px 16px 0 #23252688;
+  transition: background 0.2s, box-shadow 0.2s;
+  border: none;
   cursor: pointer;
-  transition: background var(--transition);
 }
-.buy-form button:hover {
-  background: #fff;
-  color: var(--accent2);
-}
-.buy-success {
-  color: var(--accent);
-  font-weight: 700;
-  margin-top: 18px;
-  font-size: 1.1rem;
-  text-align: center;
+.discord-ticket-btn:hover {
+  background: #4752c4;
+  color: #fff;
+  box-shadow: 0 4px 32px 0 #5865F2;
 }
 
 .docs-section {
@@ -333,7 +312,7 @@ main {
 }
 .docs-section h2 {
   font-size: 2rem;
-  color: var(--accent2);
+  color: var(--accent);
   margin-bottom: 18px;
 }
 .docs-placeholder {
@@ -388,7 +367,6 @@ body.theme-blue {
   --bg1: #232526;
   --bg2: #4fc3f7;
   --bg3: #1a2233;
-  --bg4: #16213e;
 }
 body.theme-green {
   --accent: #81c784;
@@ -399,5 +377,4 @@ body.theme-green {
   --bg1: #232526;
   --bg2: #81c784;
   --bg3: #1a3322;
-  --bg4: #1a3322;
 }
