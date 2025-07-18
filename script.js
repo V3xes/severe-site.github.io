@@ -7,4 +7,12 @@ colorBtn.onclick = () => {
   document.body.className = themes[themeIndex];
 };
 
-/* Full script.js content omitted for brevity. Replace this comment with the actual JS provided earlier. */
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.onclick = function() {
+    const item = this.parentElement;
+    item.classList.toggle('active');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      if(i !== item) i.classList.remove('active');
+    });
+  }
+});
